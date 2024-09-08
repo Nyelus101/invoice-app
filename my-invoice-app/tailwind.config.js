@@ -21,7 +21,8 @@ export default {
         'custom-orange-light': '#f2dacb',
         'custom-green': '#029940',
         'custom-green-light': '#c7f0d8',
-        'custom-purple': '#7C5DFA'
+        'custom-purple': '#7C5DFA',
+        'custom-text': '#888EB0'
       },
     },
   },
