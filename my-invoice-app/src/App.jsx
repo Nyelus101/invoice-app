@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -91,39 +92,5 @@ const App = () => {
 
 export default App;
 
-
-
-
-
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Header from './components/Header';
-// import InvoiceList from './components/InvoiceList';
-// import InvoiceDetails from './components/InvoiceDetails';
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <div className="flex flex-col lg:flex-row h-screen">
-//         <Header />
-//         <div className="flex-grow bg-slate-50 flex items-center justify-center">
-//           <div className="bg-slate-200 w-[85%] lg:w-[50%] h-[90%] flex flex-col items-center">
-//             <div className='bg-slate-50 w-full h-[calc(100%-50px)] flex items-center'>
-//               <div className='w-full h-full overflow-y-auto flex flex-col items-center gap-4' >
-//                 <Routes>
-//                 <Route path="/" element={<InvoiceList />} />
-//                 <Route path="/invoice/:id" element={<InvoiceDetails />} />
-//                 </Routes>
-//               </div>
-//             </div>
-            
-//           </div>
-//         </div>
-//       </div>
-//     </Router>
-//   );
-// };
-
-// export default App;
 
 
