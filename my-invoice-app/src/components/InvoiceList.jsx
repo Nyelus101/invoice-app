@@ -46,7 +46,7 @@ const InvoiceList = ({ invoices }) => {
   return (
     <div className="w-full h-[80%] ">
       {/* Fixed Header */}
-      <div className="bg-slate-50 w-full h-[20%] flex items-center justify-between sticky top-0 z-10">
+      <div className="bg-slate-50 w-full h-[5%] pb-10 md:pb-0 md:h-[20%] flex items-center justify-between sticky top-0 z-10">
         <div>
           <div className="font-extrabold text-3xl">Invoices</div>
             <div>
