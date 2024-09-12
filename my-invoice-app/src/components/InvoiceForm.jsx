@@ -90,15 +90,15 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
   return (
     <div>
       <div>
-        <h1>{id ? `Edit Invoice #${id}` : 'Create Invoice'}</h1>
+        <h1 className="text-black font-bold text-lg py-5">{id ? `Edit #${id}` : 'Create Invoice'}</h1>
       </div>
-      <form className="h-[70vh] overflow-auto remove-scrollbar">
-        <h2>Bill From</h2>
+      <form className="h-[60vh] lg:h-[70vh] overflow-auto remove-scrollbar">
+        <h2 className='text-custom-purple font-bold pb-3'>Bill From</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 w-full">
           <div className="md:col-span-3">
-            <label className="block mb-2">Street Address</label>
+            <label className="block mb-2 text-custom-text">Street Address</label>
             <input
-              className="w-full"
+              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
               type="text"
               name="senderAddress.street"
               value={invoiceData.senderAddress.street}
@@ -106,9 +106,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
             />
           </div>
           <div className="md:col-span-1">
-            <label className="block mb-2">City</label>
+            <label className="block mb-2 text-custom-text">City</label>
             <input
-              className="w-full"
+              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
               type="text"
               name="senderAddress.city"
               value={invoiceData.senderAddress.city}
@@ -116,9 +116,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
             />
           </div>
           <div className="md:col-span-1">
-            <label className="block mb-2">Post Code</label>
+            <label className="block mb-2 text-custom-text">Post Code</label>
             <input
-              className="w-full"
+              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
               type="text"
               name="senderAddress.postCode"
               value={invoiceData.senderAddress.postCode}
@@ -126,9 +126,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
             />
           </div>
           <div className="md:col-span-1">
-            <label className="block mb-2">Country</label>
+            <label className="block mb-2 text-custom-text">Country</label>
             <input
-              className="w-full"
+              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
               type="text"
               name="senderAddress.country"
               value={invoiceData.senderAddress.country}
@@ -136,11 +136,11 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
             />
           </div>
         </div>
-        <h2 className="mt-4">Bill To</h2>
+        <h2 className="mt-4 text-custom-purple font-bold">Bill To</h2>
         <div className="mt-4">
-          <label className="block mb-2">Client's Name</label>
+          <label className="block mb-2 text-custom-text">Client's Name</label>
           <input
-            className="w-full p-3"
+            className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
             type="text"
             name="clientName"
             value={invoiceData.clientName}
@@ -148,9 +148,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
           />
         </div>
         <div className="my-4">
-          <label className="block mb-2">Client's Email</label>
+          <label className="block mb-2 text-custom-text">Client's Email</label>
           <input
-            className="w-full p-3"
+            className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
             type="email"
             name="clientEmail"
             placeholder="e.g. email@example.com"
@@ -160,9 +160,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 w-full">
           <div className="md:col-span-3">
-            <label className="block mb-2">Street Address</label>
+            <label className="block mb-2 text-custom-text">Street Address</label>
             <input
-              className="w-full p-3"
+              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
               type="text"
               name="clientAddress.street"
               value={invoiceData.clientAddress.street}
@@ -170,9 +170,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
             />
           </div>
           <div className="md:col-span-1">
-            <label className="block mb-2">City</label>
+            <label className="block mb-2 text-custom-text">City</label>
             <input
-              className="w-full p-3"
+              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
               type="text"
               name="clientAddress.city"
               value={invoiceData.clientAddress.city}
@@ -180,9 +180,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
             />
           </div>
           <div className="md:col-span-1">
-            <label className="block mb-2">Post Code</label>
+            <label className="block mb-2 text-custom-text">Post Code</label>
             <input
-              className="w-full p-3"
+              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
               type="text"
               name="clientAddress.postCode"
               value={invoiceData.clientAddress.postCode}
@@ -190,9 +190,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
             />
           </div>
           <div className="md:col-span-1">
-            <label className="block mb-2">Country</label>
+            <label className="block mb-2 text-custom-text">Country</label>
             <input
-              className="w-full p-3"
+              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
               type="text"
               name="clientAddress.country"
               value={invoiceData.clientAddress.country}
@@ -202,9 +202,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
         </div>
         <div className="w-full flex justify-between mt-4">
           <div className="w-[45%]">
-            <label className="block mb-2">Invoice Date</label>
+            <label className="block mb-2 text-custom-text">Invoice Date</label>
             <input
-              className="w-full p-3"
+              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
               type="date"
               name="createdAt"
               value={invoiceData.createdAt}
@@ -212,9 +212,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
             />
           </div>
           <div className="w-[45%]">
-            <label className="block mb-2">Payment Due Date</label>
+            <label className="block mb-2 text-custom-text">Payment Due Date</label>
             <input
-              className="w-full p-3"
+              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
               type="date"
               name="paymentDue"
               value={invoiceData.paymentDue}
@@ -223,9 +223,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
           </div>
         </div>
         <div className="w-full mt-5">
-          <label className="block mb-2">Description</label>
+          <label className="block mb-2 text-custom-text">Description</label>
           <input
-            className="w-full p-3"
+            className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
             type="text"
             name="description"
             placeholder="e.g. Graphic Design Service"
@@ -234,40 +234,40 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
           />
         </div>
         <div>
-          <h3>Item List</h3>
-          <div>
+          <h3 className='font-bold py-5 text-custom-text'>Item List</h3>
+          <div className='pb-5'>
             {invoiceData.items.map((item, index) => (
               <div key={index} className="grid md:grid-cols-8 grid-cols-6 mb-3 gap-3">
                 <div className="col-span-3">
-                  <label className="block">Item Name</label>
+                  <label className="block text-custom-text">Item Name</label>
                   <input
-                    className="w-full"
+                    className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
                     type="text"
                     value={item.name}
                     onChange={(e) => handleItemChange(index, 'name', e.target.value)}
                   />
                 </div>
                 <div>
-                  <label className="block">Qty.</label>
+                  <label className="block text-custom-text">Qty.</label>
                   <input
-                    className="w-full"
+                    className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
                     type="number"
                     value={item.quantity}
                     onChange={(e) => handleItemChange(index, 'quantity', parseInt(e.target.value))}
                   />
                 </div>
                 <div className="col-span-2">
-                  <label className="block">Price</label>
+                  <label className="block text-custom-text">Price</label>
                   <input
-                    className="w-full"
+                    className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
                     type="number"
                     value={item.price}
                     onChange={(e) => handleItemChange(index, 'price', parseFloat(e.target.value))}
                   />
                 </div>
                 <div>
-                  <label className="block">Total</label>
-                  <input className="w-full" type="text" value={item.total.toFixed(2)} readOnly />
+                  <label className="block text-custom-text">Total</label>
+                  <input className="w-full p-2 font-semibold text-black bg-gray-50" type="text" value={item.total.toFixed(2)} readOnly />
                 </div>
                 <div className="flex items-end justify-center">
                   <button type="button" onClick={() => handleRemoveItem(index)} className="text-red-500">
@@ -277,11 +277,13 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
               </div>
             ))}
           </div>
-          <button type="button" onClick={handleAddItem} className="bg-blue-500 text-white p-2 rounded-md">
+          <button type="button" onClick={handleAddItem} className="w-full bg-custom-bg p-2 rounded-full text-custom-text font-bold text-sm">
             + Add New Item
           </button>
         </div>
-        <div className="flex justify-between mt-5">
+        
+      </form>
+      <div className="flex justify-between mt-5">
           <button
             type="button"
             onClick={() => navigate('/')}
@@ -306,7 +308,6 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
             </button>
           </div>
         </div>
-      </form>
     </div>
   );
 };
