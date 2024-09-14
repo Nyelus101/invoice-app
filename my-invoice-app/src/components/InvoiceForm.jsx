@@ -248,32 +248,35 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices }) => {
                     onChange={(e) => handleItemChange(index, 'name', e.target.value)}
                   />
                 </div>
-                <div>
-                  <label className="block text-custom-text">Qty.</label>
-                  <input
-                    className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
-                    type="number"
-                    value={item.quantity}
-                    onChange={(e) => handleItemChange(index, 'quantity', parseInt(e.target.value))}
-                  />
-                </div>
-                <div className="col-span-2">
-                  <label className="block text-custom-text">Price</label>
-                  <input
-                    className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
-                    type="number"
-                    value={item.price}
-                    onChange={(e) => handleItemChange(index, 'price', parseFloat(e.target.value))}
-                  />
-                </div>
-                <div>
-                  <label className="block text-custom-text">Total</label>
-                  <input className="w-full p-2 font-semibold text-black bg-gray-50" type="text" value={item.total.toFixed(2)} readOnly />
-                </div>
-                <div className="flex items-center  justify-center">
-                  <button type="button" onClick={() => handleRemoveItem(index)} className="text-custom-text">
-                    <RiDeleteBinFill />
-                  </button>
+                {/* THIS IS WHERE TO BEGIN */}
+                <div className='flex flex-row justify-between w-full'>
+                  <div>
+                    <label className="block text-custom-text">Qty.</label>
+                    <input
+                      className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+                      type="number"
+                      value={item.quantity}
+                      onChange={(e) => handleItemChange(index, 'quantity', parseInt(e.target.value))}
+                    />
+                  </div>
+                  <div className="col-span-2">
+                    <label className="block text-custom-text">Price</label>
+                    <input
+                      className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+                      type="number"
+                      value={item.price}
+                      onChange={(e) => handleItemChange(index, 'price', parseFloat(e.target.value))}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-custom-text">Total</label>
+                    <input className="w-full p-2 font-semibold text-black bg-gray-50" type="text" value={item.total.toFixed(2)} readOnly />
+                  </div>
+                  <div className="flex items-center  justify-center">
+                    <button type="button" onClick={() => handleRemoveItem(index)} className="text-custom-text">
+                      <RiDeleteBinFill />
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
