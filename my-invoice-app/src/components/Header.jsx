@@ -3,27 +3,30 @@ import React, { useState } from 'react';
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [selectedFilter, setSelectedFilter] = useState('All');
+  // const [selectedFilter, setSelectedFilter] = useState('All');
   const [dark, setDark] = useState(true);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+  // const toggleDropdown = () => {
+  //   setIsDropdownOpen(!isDropdownOpen);
+  // };
 
-  const handleFilterChange = (filter) => {
-    setSelectedFilter(filter);
-    setIsDropdownOpen(false); // Close dropdown after selection
-  };
+  // const handleFilterChange = (filter) => {
+  //   setSelectedFilter(filter);
+  //   setIsDropdownOpen(false); // Close dropdown after selection
+  // };
 
   return (
-    <header className="flex lg:flex-col lg:items-start lg:w-[7%] lg:h-screen p-4 bg-gray-800 text-white">
+    <header className="flex lg:flex-col lg:items-start lg:w-[7%] h-1/2 lg:h-screen bg-gray-800 text-white lg:rounded-r-2xl ">
       {/* Logo */}
-      <button className="flex-shrink-0 text-2xl font-bold mb-4 lg:mb-8">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26"><path fill="#FFF" fillRule="evenodd" d="M20.513 0C24.965 2.309 28 6.91 28 12.21 28 19.826 21.732 26 14 26S0 19.826 0 12.21C0 6.91 3.035 2.309 7.487 0L14 12.9z"/></svg>
-      </button>
+      {/* CONTINUE HERE */}
+      <div className='bg-custom-purple w-[20%] lg:w-full h-36 rounded-r-2xl'>
+        <button className="flex-shrink-0 text-2xl font-bold mb-4 lg:mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26"><path fill="#FFF" fillRule="evenodd" d="M20.513 0C24.965 2.309 28 6.91 28 12.21 28 19.826 21.732 26 14 26S0 19.826 0 12.21C0 6.91 3.035 2.309 7.487 0L14 12.9z"/></svg>
+        </button>
+      </div>
 
       {/* Avatar Icon and Light/Dark Mode Button */}
-      <div className="ml-auto lg:ml-0 lg:mt-auto flex items-center lg:flex-col space-x-4">
+      <div className="ml-auto lg:ml-0 lg:mt-auto flex items-center justify-center lg:flex-col space-x-4">
         <div className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-md">
             {dark ? (
                 <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -43,12 +46,13 @@ const Header = () => {
                 </svg>
             )}
         </div>
-
-        <img
-          src="https://via.placeholder.com/40"
-          alt="User Avatar"
-          className="rounded-full h-10 w-10"
-        />
+        <div>
+          <img
+            src="https://via.placeholder.com/40"
+            alt="User Avatar"
+            className="rounded-full h-10 w-10"
+          />
+        </div>
       </div>
     </header>
   );
