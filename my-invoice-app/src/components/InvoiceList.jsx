@@ -4,9 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import illustrationEmpty from '../assets/illustration-empty.svg';
-
-
 
 
 const statusStyles = {

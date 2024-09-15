@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import myImage from '../assets/my-image.jpg';
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -14,20 +14,22 @@ const Header = () => {
   //   setSelectedFilter(filter);
   //   setIsDropdownOpen(false); // Close dropdown after selection
   // };
+  // <button className="flex-shrink-0 text-2xl font-bold">
+  //   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26"><path fill="#FFF" fillRule="evenodd" d="M20.513 0C24.965 2.309 28 6.91 28 12.21 28 19.826 21.732 26 14 26S0 19.826 0 12.21C0 6.91 3.035 2.309 7.487 0L14 12.9z"/></svg>
+  // </button>
 
   return (
-    <header className="flex lg:flex-col lg:items-start lg:w-[7%] h-1/2 lg:h-screen bg-gray-800 text-white lg:rounded-r-2xl ">
+    <header className="flex lg:flex-col justify-between lg:w-[7%] h-1/2 lg:h-screen bg-gray-800 text-white lg:rounded-r-2xl ">
       {/* Logo */}
-      {/* CONTINUE HERE */}
-      <div className='bg-custom-purple w-[20%] lg:w-full h-36 rounded-r-2xl'>
-        <button className="flex-shrink-0 text-2xl font-bold mb-4 lg:mb-8">
+      <div className='flex items-center justify-center bg-custom-purple w-[20%] lg:w-full h-[70px] lg:h-[75px] rounded-r-2xl'>
+        <button className="flex-shrink-0 text-2xl font-bold">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26"><path fill="#FFF" fillRule="evenodd" d="M20.513 0C24.965 2.309 28 6.91 28 12.21 28 19.826 21.732 26 14 26S0 19.826 0 12.21C0 6.91 3.035 2.309 7.487 0L14 12.9z"/></svg>
         </button>
       </div>
 
       {/* Avatar Icon and Light/Dark Mode Button */}
-      <div className="ml-auto lg:ml-0 lg:mt-auto flex items-center justify-center lg:flex-col space-x-4">
-        <div className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-md">
+      <div className="flex items-center justify-center lg:flex-col gap-8 pr-5 lg:pr-0 lg:pb-5">
+        <div className=" text-white  rounded-md">
             {dark ? (
                 <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -46,10 +48,12 @@ const Header = () => {
                 </svg>
             )}
         </div>
+          {/* Divider Line */}
+        <div className="block border-l lg:border-b lg:border-l-0 border-gray-600 h-full lg:w-full lg:h-0"></div>
         <div>
           <img
-            src="https://via.placeholder.com/40"
-            alt="User Avatar"
+            src={myImage}
+            alt="My Image"
             className="rounded-full h-10 w-10"
           />
         </div>
