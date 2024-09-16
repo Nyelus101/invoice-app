@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -55,7 +54,12 @@ const App = () => {
                 <Routes>
                   <Route
                     path="/"
-                    element={<InvoiceList invoices={invoices} />}
+                    element={<InvoiceList 
+                      invoices={invoices} 
+                      addInvoice={addInvoice}
+                      deleteInvoice={deleteInvoice}
+                      updateInvoice={updateInvoice}
+                    />}
                   />
                   <Route
                     path="/invoice/:id"
