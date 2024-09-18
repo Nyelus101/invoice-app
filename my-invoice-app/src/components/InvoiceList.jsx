@@ -26,6 +26,8 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
   const [filter, setFilter] = useState('all');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isNewMode, setIsNewMode] = useState(false);
 
   const handleInvoiceClick = (id) => {
     navigate(`/invoice/${id}`);
@@ -48,7 +50,7 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
 
 
     // FOR THE MODAL
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    // const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
       const handleResize = () => {
@@ -65,15 +67,16 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
 
     const handleClick = () => {
       if (window.innerWidth >= 768) {
+        setIsNewMode(true);
         setIsModalOpen(true);
       } else {
         navigate('/invoice/new');
       }
     };
 
-    const closeModal = () => {
-      setIsModalOpen(false);
-    };
+    // const closeModal = () => {
+    //   setIsModalOpen(false);
+    // };
 
   return (
     <div className="w-full h-[80%] ">
@@ -228,7 +231,7 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
       </div>
 
       {/* New Invoice Modal */}
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
+      {/* <Modal isOpen={isModalOpen} onClose={closeModal}>
         <InvoiceForm
             invoices={invoices}
             addInvoice={addInvoice}
@@ -237,6 +240,19 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
             setIsModalOpen={setIsModalOpen}
             isModalOpen={isModalOpen}
         />
+      </Modal> */}
+
+      {/* Edit Invoice Modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        {/* Insert your Edit Invoice Form here */}
+        {/* <h2>Edit Invoice</h2> */}
+        <InvoiceForm
+            invoices={invoices}
+            addInvoice={addInvoice}
+            updateInvoice={updateInvoice}
+            onClose={() => setIsModalOpen(false)}
+        />
+        {/* Form component or code */}
       </Modal>
     </div>
   );
