@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { RiDeleteBinFill } from 'react-icons/ri';
 
-const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsModalOpen }) => {
+const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsModalOpen, isNewMode, onClose }) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [invoiceData, setInvoiceData] = useState({
@@ -112,6 +112,7 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
     }
 
     navigate('/');
+    onClose();
   };
 
   return (
@@ -365,7 +366,7 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
           <div className="flex gap-3 items-center justify-between  w-full">
             <button
               type="button"
-              onClick={() => navigate('/')}
+              onClick={() => {navigate('/'), onClose()}}
               className="bg-gray-200 text-custom-text font-semibold text-sm px-6 py-2 rounded-full"
             >
               Discard
