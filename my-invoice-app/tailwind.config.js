@@ -23,7 +23,9 @@ export default {
         'custom-green-light': '#c7f0d8',
         'custom-purple': '#7C5DFA',
         'custom-text': '#888EB0',
-        'custom-bg': '#DFE3FA'
+        'custom-bg': '#DFE3FA',
+        'custom-logo1': '#7C5DFA',
+        'custom-logo2': '#9277FF'
       },
     },
   },

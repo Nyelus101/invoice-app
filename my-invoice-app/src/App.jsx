@@ -45,8 +45,9 @@ const App = () => {
 
   return (
     <Router>
-      <div className="flex flex-col lg:flex-row h-screen">
-        <Header />
+      <Header />
+      <div className="flex flex-col lg:flex-row mt-[15%] lg:mt-0 h-[80%] lg:h-screen bg-green-600">
+        {/* <Header /> */}
         <div className="flex-grow bg-slate-50 flex items-center justify-center">
           <div className="bg-slate-800 w-[85%] lg:w-[50%] h-[90%] flex flex-col items-center">
             <div className="bg-slate-50 w-full h-[100%] flex items-center">

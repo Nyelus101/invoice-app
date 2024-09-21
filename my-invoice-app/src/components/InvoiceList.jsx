@@ -80,7 +80,7 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
     };
 
   return (
-    <div className="w-full h-[80%] ">
+    <div className="w-full h-[80%] mt-4 md:mt-1 lg:mt-0">
       {/* Fixed Header */}
       <div className="bg-slate-50 w-full h-[5%] pb-10 md:pb-0 md:h-[20%] flex items-center justify-between sticky top-0 z-10">
         <div>
@@ -230,18 +230,6 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
           </div>
         )}
       </div>
-
-      {/* New Invoice Modal */}
-      {/* <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <InvoiceForm
-            invoices={invoices}
-            addInvoice={addInvoice}
-            updateInvoice={updateInvoice}
-            onClose={() => setIsModalOpen(false)}
-            setIsModalOpen={setIsModalOpen}
-            isModalOpen={isModalOpen}
-        />
-      </Modal> */}
 
       {/* New Invoice Modal */}
       <Modal isOpen={isModalOpen} onClose={() => {setIsModalOpen(false), closeModal()}}>

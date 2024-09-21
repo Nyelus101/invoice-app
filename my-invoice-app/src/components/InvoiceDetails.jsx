@@ -85,7 +85,18 @@ const InvoiceDetails = ({ invoices, deleteInvoice, updateInvoice }) => {
             Go back
         </button>
       </div> 
-      <div className="bg-white rounded p-5 flex items-center justify-between mb-4">
+      <div className='small-screens md:hidden bg-white rounded p-5 flex  mb-4'>
+        <div className='flex flex-row items-center justify-between gap-5'>
+          <div className='text-gray-600 font-semibold text-sm'>Status</div>
+          <div className="flex items-center justify-between">
+            <span className={`flex items-center justify-center gap-2 px-2 py-1 rounded ${statusStyles[invoice.status].badge} inline-block`}>
+              <div className={`w-2 h-2 rounded-full ${statusStyles[invoice.status].bullet}`}></div>
+              {invoice.status.charAt(0).toUpperCase() + invoice.status.slice(1)}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="large-screens bg-white rounded p-5 hidden md:flex items-center justify-between mb-4">
         <div className='flex flex-row items-center gap-5'>
           <div className='text-gray-600 font-semibold text-sm'>Status</div>
           <div className="flex items-center justify-between">
@@ -191,7 +202,7 @@ const InvoiceDetails = ({ invoices, deleteInvoice, updateInvoice }) => {
       </div>
 
       {/* Buttons for small screens */}
-      <div className="md:hidden flex gap-2 pb-8 w-full justify-between items-center sticky">
+      <div className="md:hidden flex gap-2 pb-8 pt-5 w-full justify-between items-center sticky">
         <button className="p-2 px-5 bg-gray-200 text-gray-800 text-sm rounded-full font-semibold"
           onClick={() => navigate(`/invoice/edit/${invoice.id}`)}>Edit</button>
         <button className="p-2 px-5 bg-red-500 text-white text-sm rounded-full font-semibold"
