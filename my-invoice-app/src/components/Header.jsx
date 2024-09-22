@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
 import myImage from '../assets/my-image.jpg';
 import { useTheme } from './ThemeContext';
+import AvatarModal from './AvatarModal';
 
 const Header = () => {
   // const [dark, setDark] = useState(true);
   const { darkMode, toggleDarkMode } = useTheme();
+  const [isAvatarModalOpen, setIsAvatarModalOpen] = useState(false);
+
+  const handleCloseAvatarModal = () => {
+    setIsAvatarModalOpen(false); // Close Avatar modal
+  };
+
+  const handleModalOpening = () => {
+    setIsAvatarModalOpen(true);
+  };
 
   return (
     <header className="fixed top-0 lg:left-0 flex flex-row lg:flex-col justify-between w-full lg:w-[7%] h-20 lg:h-screen bg-[#2b2f4e] text-white lg:rounded-r-2xl z-50">
@@ -57,9 +67,16 @@ const Header = () => {
             src={myImage}
             alt="My Image"
             className="rounded-full h-10 w-10"
+            onClick={handleModalOpening}
           />
+            {/* Confirmation Modal for Deletion */}
+            <AvatarModal
+                show={isAvatarModalOpen}
+                onClose={handleCloseAvatarModal}
+            />
         </div>
       </div>
+
     </header>
   );
 };

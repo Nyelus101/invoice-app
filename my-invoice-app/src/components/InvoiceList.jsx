@@ -98,13 +98,13 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
 
         </div>
         <div className='flex flex-row items-center space-x-3 dark:bg-[#1E2139] dark:text-white'>
-          <div className="dark:bg-[#1E2139] dark:text-white">
+          <div className="relative dark:bg-[#1E2139] dark:text-white">
             <button onClick={toggleDropdown} className="p-2 flex items-center gap-2">
               Filter <span className='hidden md:block'>by status</span>
               {isDropdownOpen ? <MdOutlineKeyboardArrowUp /> : <MdKeyboardArrowDown />}
             </button>
             {isDropdownOpen && (
-              <div className="absolute right-16 md:right-32 mt-2 w-48 bg-white dark:bg-[#1E2139] dark:text-white rounded-lg shadow-lg z-20">
+              <div className="absolute mx-[-50%] md:mx-[-20%] mt-2 w-48 bg-white dark:bg-[#1E2139] dark:text-white rounded-lg shadow-lg z-20">
                 <ul>
                   <li>
                     <button
