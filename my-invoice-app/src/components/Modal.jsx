@@ -4,8 +4,8 @@ const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed top-0 left-0 lg:left-24 w-full h-full bg-black bg-opacity-50 z-40">
-      <div className="bg-white dark:bg-[#2f334e] mt-[7.6%] lg:mt-0 h-full lg:h-full w-[80%] lg:w-[40%] p-6 rounded-r-2xl shadow-lg md:shadow-none ">
+    <div className="fixed top-0 left-0 lg:left-20  w-full h-full bg-black bg-opacity-50 z-40">
+      <div className="w-[80%] lg:w-[50%] h-full pt-0 md:pt-16 lg:pt-0 pb-0 md:pb-3 lg:pb-0 flex flex-col ml-0 bg-white dark:bg-[#2f334e]  rounded-r-2xl shadow-lg md:shadow-none ">
         {/* <button
           onClick={onClose}
           className="absolute top-2 right-2 text-gray-500"

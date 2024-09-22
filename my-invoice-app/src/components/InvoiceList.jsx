@@ -80,9 +80,9 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
     };
 
   return (
-    <div className="w-full h-[80%] mt-4 md:mt-1 lg:mt-0 dark:bg-[#1E2139] dark:text-white ">
+    <div className="w-[80%] lg:w-[50%] h-full flex flex-col mx-auto dark:bg-[#1E2139] dark:text-white ">
       {/* Fixed Header */}
-      <div className="mb-2 bg-slate-50 dark:bg-[#1E2139] dark:text-white w-full h-[5%] pb-10 md:pb-0 md:h-[20%] flex items-center justify-between sticky top-0 z-10">
+      <div className="mb-2 bg-slate-50 dark:bg-[#1E2139] dark:text-white w-full h-[5%] md:h-[20%] pb-10 md:pb-0 pt-28 md:pt-20 lg:pt-0 flex items-center justify-between">
         <div>
           <div className="font-extrabold text-3xl">Invoices</div>
             <div>

@@ -62,8 +62,8 @@ const InvoiceDetails = ({ invoices, deleteInvoice, updateInvoice }) => {
   };
 
   return (
-    <div className='bg-slate-50 w-full h-[100%] dark:bg-[#1E2139]'>
-      <div className='flex flex-row items-center space-x-4 cursor-pointer mb-3' onClick={() => navigate('/')}>
+    <div className='w-[80%] lg:w-[50%] h-full flex flex-col mx-auto dark:bg-[#1E2139] dark:text-white'>
+      <div className='flex flex-row items-center space-x-4 cursor-pointer mb-3 pt-28 md:pt-32 lg:pt-10' onClick={() => navigate('/')}>
         <div><MdKeyboardArrowLeft /></div>
         <button className="font-medium" >
             Go back
