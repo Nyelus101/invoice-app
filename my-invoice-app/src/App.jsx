@@ -5,6 +5,7 @@ import InvoiceList from './components/InvoiceList';
 import InvoiceDetails from './components/InvoiceDetails';
 import InvoiceForm from './components/InvoiceForm';
 import data from './assets/data.json';
+import { ThemeProvider } from './components/ThemeContext';
 
 const App = () => {
   const [invoices, setInvoices] = useState([]);
@@ -44,54 +45,57 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <Header />
-      <div className="flex flex-col lg:flex-row mt-[15%] lg:mt-0 h-[80%] lg:h-screen bg-green-600">
-        {/* <Header /> */}
-        <div className="flex-grow bg-slate-50 flex items-center justify-center">
-          <div className="bg-slate-800 w-[85%] lg:w-[50%] h-[90%] flex flex-col items-center">
-            <div className="bg-slate-50 w-full h-[100%] flex items-center">
-              <div className="w-full h-full  flex flex-col items-center gap-4">
-                <Routes>
-                  <Route
-                    path="/"
-                    element={<InvoiceList 
-                      invoices={invoices} 
-                      addInvoice={addInvoice}
-                      deleteInvoice={deleteInvoice}
-                      updateInvoice={updateInvoice}
-                    />}
-                  />
-                  <Route
-                    path="/invoice/:id"
-                    element={
-                      <InvoiceDetails
-                        invoices={invoices}
-                        deleteInvoice={deleteInvoice}
-                        updateInvoice={updateInvoice}
-                      />
-                    }
-                  />
-                  <Route
-                    path="/invoice/new"
-                    element={<InvoiceForm addInvoice={addInvoice} />}
-                  />
-                  <Route
-                    path="/invoice/edit/:id"
-                    element={
-                      <InvoiceForm
-                        invoices={invoices}
-                        updateInvoice={updateInvoice}
-                      />
-                    }
-                  />
-                </Routes>
+    <ThemeProvider>
+          <Router>
+            <Header />
+            <div className="flex flex-col lg:flex-row mt-[15%] lg:mt-0 h-[80%] lg:h-screen dark:bg-[#1E2139] dark:text-white">
+              {/* <Header /> */}
+              <div className="flex-grow bg-slate-50 dark:bg-[#1E2139] flex items-center justify-center">
+                <div className="bg-slate-800  w-[85%] lg:w-[50%] h-[90%] flex flex-col items-center">
+                  <div className="bg-slate-50 dark:bg-[#1E2139] dark:text-white w-full h-[100%] flex items-center">
+                    <div className="w-full h-full  flex flex-col items-center gap-4 ">
+                      <Routes>
+                        <Route
+                          path="/"
+                          element={<InvoiceList 
+                            invoices={invoices} 
+                            addInvoice={addInvoice}
+                            deleteInvoice={deleteInvoice}
+                            updateInvoice={updateInvoice}
+                          />}
+                        />
+                        <Route
+                          path="/invoice/:id"
+                          element={
+                            <InvoiceDetails
+                              invoices={invoices}
+                              deleteInvoice={deleteInvoice}
+                              updateInvoice={updateInvoice}
+                            />
+                          }
+                        />
+                        <Route
+                          path="/invoice/new"
+                          element={<InvoiceForm addInvoice={addInvoice} />}
+                        />
+                        <Route
+                          path="/invoice/edit/:id"
+                          element={
+                            <InvoiceForm
+                              invoices={invoices}
+                              updateInvoice={updateInvoice}
+                            />
+                          }
+                        />
+                      </Routes>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </Router>
+          </Router>
+    </ThemeProvider>
+
   );
 };
 

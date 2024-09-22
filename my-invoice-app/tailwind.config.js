@@ -1,13 +1,3 @@
-// /** @type {import('tailwindcss').Config} */
-// export default {
-//   content: ["./src/**/*.{js,ts,jsx,tsx}"],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
-
-
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class', // Enable dark mode using the 'class' strategy
@@ -17,6 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
+        'dark-bg1': '#1E2139',
+        'dark-bg2': '#252945',
+
+
+
         'custom-orange': '#f76205',
         'custom-orange-light': '#f2dacb',
         'custom-green': '#029940',

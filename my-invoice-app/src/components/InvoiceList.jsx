@@ -80,36 +80,36 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
     };
 
   return (
-    <div className="w-full h-[80%] mt-4 md:mt-1 lg:mt-0">
+    <div className="w-full h-[80%] mt-4 md:mt-1 lg:mt-0 dark:bg-[#1E2139] dark:text-white ">
       {/* Fixed Header */}
-      <div className="mb-2 bg-slate-50 w-full h-[5%] pb-10 md:pb-0 md:h-[20%] flex items-center justify-between sticky top-0 z-10">
+      <div className="mb-2 bg-slate-50 dark:bg-[#1E2139] dark:text-white w-full h-[5%] pb-10 md:pb-0 md:h-[20%] flex items-center justify-between sticky top-0 z-10">
         <div>
           <div className="font-extrabold text-3xl">Invoices</div>
             <div>
               {/* Display on small screens */}
-              <div className="font-semibold text-xs text-gray-500 md:hidden">
+              <div className="font-semibold text-xs text-gray-500 dark:text-gray-400 md:hidden">
                 {`${filteredInvoices.length} invoices`}
               </div>
               {/* Display on medium and large screens */}
-              <div className="font-semibold text-xs text-gray-500 hidden md:block">
+              <div className="font-semibold text-xs text-gray-500 dark:text-gray-400 hidden md:block">
                 {`There are ${filteredInvoices.length} total invoices`}
               </div>
             </div>
 
         </div>
-        <div className='flex flex-row items-center space-x-3'>
-          <div className="">
+        <div className='flex flex-row items-center space-x-3 dark:bg-[#1E2139] dark:text-white'>
+          <div className="dark:bg-[#1E2139] dark:text-white">
             <button onClick={toggleDropdown} className="p-2 flex items-center gap-2">
               Filter <span className='hidden md:block'>by status</span>
               {isDropdownOpen ? <MdOutlineKeyboardArrowUp /> : <MdKeyboardArrowDown />}
             </button>
             {isDropdownOpen && (
-              <div className="absolute right-16 md:right-32 mt-2 w-48 bg-white border rounded-lg shadow-lg z-20">
+              <div className="absolute right-16 md:right-32 mt-2 w-48 bg-white dark:bg-[#1E2139] dark:text-white rounded-lg shadow-lg z-20">
                 <ul>
                   <li>
                     <button
                       onClick={() => handleFilterChange('all')}
-                      className={` w-full text-left px-4 py-2 flex items-center gap-2 ${filter === 'all' ? 'bg-gray-200' : 'hover:bg-gray-100'}`}
+                      className={` w-full text-left px-4 py-2 flex items-center gap-2 ${filter === 'all' ? 'bg-gray-200 dark:bg-[#1E2139] dark:text-white' : 'hover:bg-gray-100 dark:hover:bg-[#252945]'}`}
                     >
                       <input
                         type="checkbox"
@@ -123,7 +123,7 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
                   <li>
                     <button
                       onClick={() => handleFilterChange('paid')}
-                      className={` w-full text-left px-4 py-2 flex items-center gap-2 ${filter === 'paid' ? 'bg-gray-200' : 'hover:bg-gray-100'}`}
+                      className={` w-full text-left px-4 py-2 flex items-center gap-2 ${filter === 'paid' ? 'bg-gray-200 dark:bg-[#1E2139] dark:text-white' : 'hover:bg-gray-100 dark:hover:bg-[#252945]'}`}
                     >
                       <input
                         type="checkbox"
@@ -137,7 +137,7 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
                   <li>
                     <button
                       onClick={() => handleFilterChange('pending')}
-                      className={` w-full text-left px-4 py-2 flex items-center gap-2 ${filter === 'pending' ? 'bg-gray-200' : 'hover:bg-gray-100'}`}
+                      className={` w-full text-left px-4 py-2 flex items-center gap-2 ${filter === 'pending' ? 'bg-gray-200 dark:bg-[#1E2139] dark:text-white' : 'hover:bg-gray-100 dark:hover:bg-[#252945]'}`}
                     >
                       <input
                         type="checkbox"
@@ -151,7 +151,7 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
                   <li>
                     <button
                       onClick={() => handleFilterChange('draft')}
-                      className={` w-full text-left px-4 py-2 flex items-center gap-2 ${filter === 'draft' ? 'bg-gray-200' : 'hover:bg-gray-100'}`}
+                      className={` w-full text-left px-4 py-2 flex items-center gap-2 ${filter === 'draft' ? 'bg-gray-200 dark:bg-[#1E2139] dark:text-white' : 'hover:bg-gray-100 dark:hover:bg-[#252945]'}`}
                     >
                       <input
                         type="checkbox"
@@ -180,23 +180,23 @@ const InvoiceList = ({ invoices, addInvoice, updateInvoice }) => {
       </div>
 
       {/* Scrollable Content */}
-      <div className="flex-grow w-full h-[100%] overflow-y-auto space-y-2 bg-slate-50 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} scroll-hidden">
+      <div className="flex-grow w-full h-[100%] overflow-y-auto space-y-2 bg-slate-50 dark:bg-[#1E2139] style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} scroll-hidden">
         {filteredInvoices.length > 0 ? (
           filteredInvoices.map((invoice) => (
             <button
               key={invoice.id}
-              className="flex flex-row items-center justify-between gap-2 p-4 w-full h-30 md:h-20 drop-shadow-sm rounded-lg bg-white hover:bg-gray-100"
+              className="flex flex-row items-center justify-between gap-2 p-4 w-full h-30 md:h-20 drop-shadow-sm rounded-lg bg-white dark:bg-[#2b2f4e]  hover:bg-gray-100"
               onClick={() => handleInvoiceClick(invoice.id)}
             >
               <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-5' >
                 <div className="flex items-center justify-between text-sm font-semibold">
-                  <span><span className='text-gray-500'>#</span> {invoice.id}</span>
+                  <span><span className='text-custom-purple '>#</span> {invoice.id}</span>
                 </div>
-                <div className="flex items-center justify-between text-xs space-x-1 text-gray-500">
+                <div className="flex items-center justify-between text-xs space-x-1 text-gray-500 dark:text-gray-300">
                   <span>Due</span>
                   <span>{new Date(invoice.paymentDue).toLocaleDateString()}</span>
                 </div>
-                <div className="flex items-center justify-between text-gray-500">
+                <div className="flex items-center justify-between text-gray-500 dark:text-gray-300">
                   <span>{invoice.clientName}</span>
                 </div>
               </div>
