@@ -16,7 +16,7 @@ const AvatarModal = ({ show, onClose }) => {
           />
         </div>
         <div className="flex flex-col justify-end gap-4">
-            <div className='flex flex-col text-justify'>
+            <div className='flex flex-col text-center md:text-justify'>
                 <p>Muonyelu Chinedu is a passion-driven frontend developer dedicated to crafting responsive and interactive web experiences. He loves turning ideas into reality through clean, modern designs.</p>
                 <a
                     href="https://www.linkedin.com/in/muonyelu-chinedu-7018b7216/"
