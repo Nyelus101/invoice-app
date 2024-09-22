@@ -116,11 +116,11 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
   };
 
   return (
-    <div className='w-full'>
+    <div className='w-full h-full pt-10'>
       <div>
         <h1 className="text-black dark:text-gray-100 font-bold text-lg py-5">{id ? `Edit #${id}` : 'New Invoice'}</h1>
       </div>
-      <form className="h-[60vh] lg:h-[70vh] overflow-auto remove-scrollbar overflow-y-auto style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} scroll-hidden">
+      <form className="h-[75vh] lg:h-[70vh] overflow-auto remove-scrollbar overflow-y-auto style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} scroll-hidden">
         {/* Bill From Section */}
         <h2 className='text-custom-purple font-bold pb-3'>Bill From</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">

@@ -10,9 +10,19 @@
   /* background-color: #f8fafc; */
 }
 
-body {
+/* body {
   background-color: #f8fafc;
-}
+  height: 100%;
+} */
+
+/* html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+} */
+
 
 @media (prefers-color-scheme: dark) {
   body {
