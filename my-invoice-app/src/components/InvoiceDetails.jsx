@@ -116,8 +116,8 @@ const InvoiceDetails = ({ invoices, deleteInvoice, updateInvoice }) => {
           </div>
         </div>
         
-        <div className="grid grid-cols-3 gap-4 items-start dark:text-gray-100">
-          <div className='flex flex-col space-y-5'>
+        <div className=" grid grid-cols-3 space-x-10 md:space-x-0 gap-0 md:gap-4 justify-between items-start dark:text-gray-100">
+          <div className='flex flex-col space-y-10 md:space-y-0 '>
             <div className="flex flex-col">
               <span className="text-custom-text text-sm pb-3">Invoice Date</span>
               <span className="font-semibold">{new Date(invoice.createdAt).toLocaleDateString()} </span>
