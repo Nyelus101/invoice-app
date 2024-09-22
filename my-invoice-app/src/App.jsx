@@ -50,7 +50,7 @@ const App = () => {
             <Header />
             <div className="flex flex-col lg:flex-row mt-[15%] lg:mt-0 h-[80%] lg:h-screen dark:bg-[#1E2139] dark:text-white">
               {/* <Header /> */}
-              <div className="flex-grow bg-slate-50 dark:bg-[#1E2139] flex items-center justify-center">
+              <div className="flex-grow h-screen bg-slate-50 dark:bg-[#1E2139] flex items-center justify-center">
                 <div className="bg-slate-800  w-[85%] lg:w-[50%] h-[90%] flex flex-col items-center">
                   <div className="bg-slate-50 dark:bg-[#1E2139] dark:text-white w-full h-[100%] flex items-center">
                     <div className="w-full h-full  flex flex-col items-center gap-4 ">

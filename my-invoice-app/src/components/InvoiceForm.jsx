@@ -118,16 +118,16 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
   return (
     <div className='w-full'>
       <div>
-        <h1 className="text-black font-bold text-lg py-5">{id ? `Edit #${id}` : 'New Invoice'}</h1>
+        <h1 className="text-black dark:text-gray-100 font-bold text-lg py-5">{id ? `Edit #${id}` : 'New Invoice'}</h1>
       </div>
-      <form className="h-[60vh] lg:h-[70vh] overflow-auto remove-scrollbar">
+      <form className="h-[60vh] lg:h-[70vh] overflow-auto remove-scrollbar overflow-y-auto style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} scroll-hidden">
         {/* Bill From Section */}
         <h2 className='text-custom-purple font-bold pb-3'>Bill From</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <div className="md:col-span-3">
-            <label className="block mb-2 text-custom-text">Street Address</label>
+            <label className="block mb-2 text-custom-text dark:text-white">Street Address</label>
             <input
-              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+              className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
               type="text"
               name="senderAddress.street"
               value={invoiceData.senderAddress.street}
@@ -136,9 +136,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
             {errors.senderStreet && <p className="text-red-500 text-sm">{errors.senderStreet}</p>}
           </div>
           <div>
-            <label className="block mb-2 text-custom-text">City</label>
+            <label className="block mb-2 text-custom-text dark:text-white">City</label>
             <input
-              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+              className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
               type="text"
               name="senderAddress.city"
               value={invoiceData.senderAddress.city}
@@ -147,9 +147,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
             {errors.senderCity && <p className="text-red-500 text-sm">{errors.senderCity}</p>}
           </div>
           <div>
-            <label className="block mb-2 text-custom-text">Post Code</label>
+            <label className="block mb-2 text-custom-text dark:text-white">Post Code</label>
             <input
-              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+              className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
               type="text"
               name="senderAddress.postCode"
               value={invoiceData.senderAddress.postCode}
@@ -158,9 +158,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
             {errors.senderPostCode && <p className="text-red-500 text-sm">{errors.senderPostCode}</p>}
           </div>
           <div>
-            <label className="block mb-2 text-custom-text">Country</label>
+            <label className="block mb-2 text-custom-text dark:text-white">Country</label>
             <input
-              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+              className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
               type="text"
               name="senderAddress.country"
               value={invoiceData.senderAddress.country}
@@ -173,9 +173,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
         {/* Bill To Section */}
         <h2 className="mt-6 text-custom-purple font-bold">Bill To</h2>
         <div className="mt-4">
-          <label className="block mb-2 text-custom-text">Client's Name</label>
+          <label className="block mb-2 text-custom-text dark:text-white">Client's Name</label>
           <input
-            className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+            className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
             type="text"
             name="clientName"
             value={invoiceData.clientName}
@@ -184,9 +184,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
           {errors.clientName && <p className="text-red-500 text-sm">{errors.clientName}</p>}
         </div>
         <div className="mt-4">
-          <label className="block mb-2 text-custom-text">Client's Email</label>
+          <label className="block mb-2 text-custom-text dark:text-white">Client's Email</label>
           <input
-            className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+            className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
             type="email"
             name="clientEmail"
             value={invoiceData.clientEmail}
@@ -196,9 +196,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
           <div className="md:col-span-3">
-            <label className="block mb-2 text-custom-text">Street Address</label>
+            <label className="block mb-2 text-custom-text dark:text-white">Street Address</label>
             <input
-              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+              className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
               type="text"
               name="clientAddress.street"
               value={invoiceData.clientAddress.street}
@@ -207,9 +207,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
             {errors.clientStreet && <p className="text-red-500 text-sm">{errors.clientStreet}</p>}
           </div>
           <div>
-            <label className="block mb-2 text-custom-text">City</label>
+            <label className="block mb-2 text-custom-text dark:text-white">City</label>
             <input
-              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+              className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
               type="text"
               name="clientAddress.city"
               value={invoiceData.clientAddress.city}
@@ -218,9 +218,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
             {errors.clientCity && <p className="text-red-500 text-sm">{errors.clientCity}</p>}
           </div>
           <div>
-            <label className="block mb-2 text-custom-text">Post Code</label>
+            <label className="block mb-2 text-custom-text dark:text-white">Post Code</label>
             <input
-              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+              className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
               type="text"
               name="clientAddress.postCode"
               value={invoiceData.clientAddress.postCode}
@@ -229,9 +229,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
             {errors.clientPostCode && <p className="text-red-500 text-sm">{errors.clientPostCode}</p>}
           </div>
           <div>
-            <label className="block mb-2 text-custom-text">Country</label>
+            <label className="block mb-2 text-custom-text dark:text-white">Country</label>
             <input
-              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+              className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
               type="text"
               name="clientAddress.country"
               value={invoiceData.clientAddress.country}
@@ -244,9 +244,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
         {/* Invoice Date, Payment Due Date, and Description */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
           <div>
-            <label className="block mb-2 text-custom-text">Invoice Date</label>
+            <label className="block mb-2 text-custom-text dark:text-white">Invoice Date</label>
             <input
-              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+              className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
               type="date"
               name="createdAt"
               value={invoiceData.createdAt}
@@ -255,9 +255,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
             {errors.createdAt && <p className="text-red-500 text-sm">{errors.createdAt}</p>}
           </div>
           <div>
-            <label className="block mb-2 text-custom-text">Payment Terms</label>
+            <label className="block mb-2 text-custom-text dark:text-white">Payment Terms</label>
             <input
-              className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+              className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
               type="date"
               name="paymentDue"
               value={invoiceData.paymentDue}
@@ -267,9 +267,9 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
           </div>
         </div>
         <div className="mt-4">
-          <label className="block mb-2 text-custom-text">Project Description</label>
+          <label className="block mb-2 text-custom-text dark:text-white">Project Description</label>
           <input
-            className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+            className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
             type="text"
             name="description"
             value={invoiceData.description}
@@ -285,36 +285,36 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
           {invoiceData.items.map((item, index) => (
             <div key={index} className="w-full grid md:grid-cols-8 grid-cols-6 mb-3 gap-3 ">
               <div className="col-span-8 md:col-span-3">
-                <label className="block mb-2 text-custom-text">Item Name</label>
+                <label className="block mb-2 text-custom-text dark:text-white">Item Name</label>
                 <input
-                  className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+                  className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
                   type="text"
                   value={item.name}
                   onChange={(e) => handleItemChange(index, 'name', e.target.value)}
                 />
               </div>
               <div className='col-span-1 md:col-span-1 '>
-                <label className="block mb-2 text-custom-text">Qty.</label>
+                <label className="block mb-2 text-custom-text dark:text-white">Qty.</label>
                 <input
-                  className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+                  className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
                   type="number"
                   value={item.quantity}
                   onChange={(e) => handleItemChange(index, 'quantity', e.target.value)}
                 />
               </div>
               <div className='col-span-3 md:col-span-1 '>
-                <label className="block mb-2 text-custom-text">Price</label>
+                <label className="block mb-2 text-custom-text dark:text-white">Price</label>
                 <input
-                  className="w-full rounded-md border-gray-200 border-2 p-2 font-semibold text-black"
+                  className="w-full rounded-md border-gray-200 dark:border-[#3f425a] border-2 dark:border-1 p-2 font-semibold text-black dark:text-white dark:bg-[#3f425a]"
                   type="number"
                   value={item.price}
                   onChange={(e) => handleItemChange(index, 'price', e.target.value)}
                 />
               </div>
               <div className='col-span-3 md:col-span-2 '>
-                <label className="block mb-2 text-custom-text">Total</label>
+                <label className="block mb-2 text-custom-text dark:text-white">Total</label>
                 <input
-                  className="w-full bg-gray-50 p-2 font-semibold text-black"
+                  className="w-full bg-gray-50 p-2 font-semibold dark:border-[#3f425a] border-2 dark:border-1 text-black dark:text-white dark:bg-[#3f425a]"
                   type="number"
                   value={item.total.toFixed(2)}
                   readOnly
@@ -334,7 +334,7 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
           <button
             type="button"
             onClick={handleAddItem}
-            className="w-full bg-custom-bg p-2 rounded-full text-custom-text font-bold text-sm"
+            className="w-full bg-custom-bg dark:bg-[#3f425a] p-2 rounded-full text-custom-text dark:text-gray-300 font-bold text-sm"
           >
             + Add New Item
           </button>
@@ -349,7 +349,7 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
             <button
               type="button"
               onClick={() => navigate('/')}
-              className="bg-gray-200 text-gray-600 font-semibold text-sm px-6 py-2 rounded-full"
+              className="bg-gray-200 dark:bg-[#3f425a] text-gray-600 dark:text-gray-300 font-semibold text-sm px-6 py-2 rounded-full"
             >
               Cancel
             </button>
@@ -375,7 +375,7 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
               <button
                 type="button"
                 onClick={() => handleSave('draft')}
-                className="bg-black text-custom-purple font-semibold text-sm px-6 py-2 rounded-full"
+                className="bg-black dark:bg-[#3f425a] text-custom-purple dark:text-gray-300 font-semibold text-sm px-6 py-2 rounded-full"
               >
                 Save as Draft
               </button>
