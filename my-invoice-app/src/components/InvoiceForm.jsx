@@ -116,7 +116,7 @@ const InvoiceForm = ({ addInvoice, updateInvoice, invoices, setIsModalOpen, IsMo
   };
 
   return (
-    <div className=' w-[80%] lg:w-[80%] h-full pt-14 md:pt-0 flex flex-col mx-auto'>
+    <div className=' w-[80%] lg:w-[80%] h-[95%] md:h-full pt-14 md:pt-0 flex flex-col mx-auto'>
       <div>
         <h1 className="text-black dark:text-gray-100 font-bold text-lg py-5">{id ? `Edit #${id}` : 'New Invoice'}</h1>
       </div>
