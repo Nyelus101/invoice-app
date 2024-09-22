@@ -7,7 +7,7 @@ const Header = () => {
   const { darkMode, toggleDarkMode } = useTheme();
 
   return (
-    <header className="fixed top-0 lg:left-0 flex flex-row lg:flex-col justify-between w-full lg:w-[7%] h-[10%] lg:h-screen bg-[#2b2f4e] text-white lg:rounded-r-2xl z-50">
+    <header className="fixed top-0 lg:left-0 flex flex-row lg:flex-col justify-between w-full lg:w-[7%] h-20 lg:h-screen bg-[#2b2f4e] text-white lg:rounded-r-2xl z-50">
       {/* Logo */}
       <div className="p-0 m-0 flex flex-col items-center justify-center w-[18%] lg:w-full h-full lg:h-[15%]">
         {/* Top decorative div */}
